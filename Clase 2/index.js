@@ -114,10 +114,27 @@ let valor1 = false; */
 || es verdadero cuando al menos una de las condiciones es verdadera en caso contrario es falso
 */
 
-let nombre = prompt("Ingrese un nombre");
+/* let nombre = prompt("Ingrese un nombre");
 
 if((nombre != "") && (nombre === "ANDRES" || nombre === "andres")){
   alert("Hola" + nombre);
 }else{
   alert("quien eres?");
+} */
+
+
+/* let numero = 5;
+
+if(numero != 5){
+  console.log("no es 5");
+}else{
+  console.log("es 5");
+} */
+
+let numero = 10;
+
+if(numero % 2 != 0){
+  console.log("es impar");
+}else{
+  console.log("es par");
 }
