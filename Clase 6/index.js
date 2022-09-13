@@ -59,3 +59,47 @@ console.log(nombres.includes("pedro")); */
 /* const nombres = ["camila", "andres", "mariana", "pedro", "mario", "yuliana"];
 nombres.reverse();
 console.log(nombres); */
+/* const nombres = ["camila", "andres", "mariana", "pedro", "mario", "yuliana"];
+
+const eliminarNombre = (nombre) => {
+  let indice = nombres.indexOf(nombre);
+
+  if(indice != -1){
+    nombres.splice(indice, 1);
+  }
+
+  console.log(nombres);
+};
+
+eliminarNombre("mariana"); */
+
+/* const productos = [
+  { id: 1, producto: "Arroz" },
+  { id: 2, producto: "Fideo" },
+  { id: 3, producto: "Pan" },
+];
+
+for(const producto of productos){
+  console.log(producto);
+} */
+
+class Producto {
+  constructor(id, nombre, precio) {
+    this.id = id;
+    this.nombre = nombre;
+    this.precio = precio;
+  }
+}
+
+let productos = [];
+productos.push(new Producto(productos.length + 1, "camisa", 1000));
+productos.push(new Producto(productos.length + 1, "pantalon", 2000));
+
+console.log(productos);
+
+let objeto = {
+  nombre: "jaime",
+  edad: 34
+}
+
+console.log(objeto.nombre);
