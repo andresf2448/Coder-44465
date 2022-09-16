@@ -122,7 +122,7 @@ recorrer([1,2,3,4], console.log); */
 // console.log(numeros.sort((a, b) => a - b));
 // console.log(numeros.sort((a, b) => b - a));
 
-const items = [
+/* const items = [
   { name: "Pikachu", price: 21 },
   { name: "Charmander", price: 37 },
   { name: "Pidgey", price: 45 },
@@ -140,4 +140,42 @@ console.log(
 
     return 0;
   })
-);
+); */
+
+//Math
+/* console.log(Math.E);
+console.log(Math.PI);
+console.log(Math.max(1,2,3,4,5,6,7,7,777,5,4,999));
+console.log(Math.min(1,2,3,4,5,6,7,7,777,5,4,999)); */
+/* console.log(Math.ceil(3.45));
+console.log(Math.floor(3.74));
+console.log(Math.round(3.654)); */
+
+// console.log(Math.sqrt(9));
+// console.log(Math.random() * 10);
+
+//Date
+// console.log(Date());
+// console.log(new Date(2020, 1, 15, 23, 40, 3));
+/* const casiNavidad = new Date("December 24, 2022 23:59:59")
+console.log(casiNavidad) */
+
+/* const hoy = new Date("September 15, 2022")
+
+console.log(hoy.getFullYear())
+console.log(hoy.getMonth()) 
+console.log(hoy.getDay()) */
+
+/* const hoy = new Date("December 17, 2021");
+console.log(hoy.toDateString());
+console.log(hoy.toLocaleString());
+console.log(hoy.toLocaleDateString());
+console.log( hoy.toTimeString() ) */
+
+const navidad = new Date("December 25, 2022");
+const hoy = new Date("September 15, 2022");
+
+console.log(navidad - hoy);
+const milisegundosPorDia = 86400000;
+
+console.log((navidad - hoy) / milisegundosPorDia);
