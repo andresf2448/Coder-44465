@@ -32,3 +32,75 @@ sessionStorage.removeItem("edad");
 //para eliminar el storage completo hacemos clear();
 localStorage.clear();
 sessionStorage.clear(); */
+
+/* let objeto = {nombre: "andres", edad: 70}
+localStorage.setItem("objeto", JSON.stringify(objeto));
+localStorage.setItem("arreglo", JSON.stringify([2,3,4,5,4])); */
+
+/* let objeto = JSON.parse(localStorage.getItem("objeto"));
+console.log(objeto);
+
+let arreglo = localStorage.getItem("arreglo");
+console.log(JSON.parse(arreglo)); */
+
+/* const productos = [
+  { id: 1, nombre: "camisa", precio: 1000 },
+  { id: 2, nombre: "pantalon", precio: 700 },
+  { id: 3, nombre: "gorra", precio: 300 },
+  { id: 4, nombre: "zapato", precio: 1450 },
+];
+ */
+/* const guardarStorage = (clave, valor) => {localStorage.setItem(clave, valor)};
+
+productos.forEach(producto => {
+  guardarStorage(producto.id, JSON.stringify(producto));
+}) */
+
+// localStorage.setItem("carrito", JSON.stringify(productos));
+
+/* let usuario;
+let usuarioStorage = sessionStorage.getItem("usuario");
+
+if(usuarioStorage){
+  usuario = usuarioStorage;
+  let mensaje = `Bienvenido ${usuario}`;
+  alert(mensaje);
+}else{
+  usuario = prompt("Ingrese su usuario");
+  sessionStorage.setItem("usuario", usuario);
+} */
+
+/* const productos = [
+  { id: 1, nombre: "camisa", precio: 1000 },
+  { id: 2, nombre: "pantalon", precio: 700 },
+  { id: 3, nombre: "gorra", precio: 300 },
+  { id: 4, nombre: "zapato", precio: 1450 },
+];
+
+localStorage.setItem("carrito", JSON.stringify(productos)); */
+
+let contenedor = document.getElementById("contenedor");
+let boton = document.getElementById("boton");
+let carrito = [];
+let carritoStorage = JSON.parse(localStorage.getItem("carrito"));
+
+if(carritoStorage){
+  carrito = carritoStorage;
+}
+
+carrito.forEach(item => {
+  let div = document.createElement("div");
+  div.innerHTML = `
+    <h2>ID: ${item.id}</h2>
+    <p>Nombre: ${item.nombre}</p>
+    <b>$${item.precio}</b>
+  `;
+
+  contenedor.append(div);
+});
+
+boton.addEventListener("click", () => {
+  localStorage.clear();
+  contenedor.innerHTML = "";
+  alert("productos borrados");
+})
