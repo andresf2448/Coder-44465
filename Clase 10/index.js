@@ -70,7 +70,9 @@ if(usuarioStorage){
   sessionStorage.setItem("usuario", usuario);
 } */
 
-/* const productos = [
+/* 
+//Cargar el storage
+const productos = [
   { id: 1, nombre: "camisa", precio: 1000 },
   { id: 2, nombre: "pantalon", precio: 700 },
   { id: 3, nombre: "gorra", precio: 300 },
@@ -79,15 +81,20 @@ if(usuarioStorage){
 
 localStorage.setItem("carrito", JSON.stringify(productos)); */
 
+//traemos los elementos del dom
 let contenedor = document.getElementById("contenedor");
 let boton = document.getElementById("boton");
+
+//declaramos el carrito y traemosdel storage
 let carrito = [];
 let carritoStorage = JSON.parse(localStorage.getItem("carrito"));
 
+//validamos si en el storage existe el carrito
 if(carritoStorage){
   carrito = carritoStorage;
 }
 
+//recorremos el carrito para renderizarlo en el contenedor
 carrito.forEach(item => {
   let div = document.createElement("div");
   div.innerHTML = `
@@ -99,6 +106,7 @@ carrito.forEach(item => {
   contenedor.append(div);
 });
 
+//lógica para el borrado del carrito y del contenedor
 boton.addEventListener("click", () => {
   localStorage.clear();
   contenedor.innerHTML = "";
