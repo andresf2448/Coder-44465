@@ -55,6 +55,8 @@ const crearProducto = (nombre, precio) => {
     
     carrito.push(nuevoProducto);
     localStorage.setItem("carrito", JSON.stringify(carrito));
+  }else{
+    alert("Este producto ya existe");
   }
 };
 
